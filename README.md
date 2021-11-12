@@ -76,4 +76,28 @@
 --> Salva o arquivo e importa ele dentro do index.jsx. Salva e execulta com o seguinte código:</br>
 ```yarn webpack```</br>
 --> Vamos agora dentro do arquivo index.jsx na pasta src, adicionar a seguinte div no corpo do arquivo:</br>
-```<div id="root"></div>```
+```<div id="root"></div>```</br>
+# 12/11/2021
+--> Vamos adicionar a opção de desenvolvimento nas configurações do arquivo webpack.config.js para evitar a demora no momento de executar o yarn webpack.</br>
+```const path = require('path')```</br>
+
+```module.exports = {```</br>
+```  node : 'development',```</br>
+```  entry: path.resolve(__dirname, 'src', 'index.jsx'),```</br>
+```  output: {```</br>
+```    path: path.resolve(__dirname, 'dist'),```</br>
+```    filename: 'bundle.js'```</br>
+```  },```</br>
+```  resolve: {```</br>
+```    extensions: ['.js', '.jsx'],```</br>
+```  },```</br>
+```  module: {```</br>
+```    rules: [```</br>
+```      {```</br>
+```        test: /\.jsx$/,```</br>
+```        exclude: /node_modules/,```</br>
+```        use: 'babel-loader',```</br>
+```      }```</br>
+```    ],```</br>
+```  }```</br>
+```};```</br>
