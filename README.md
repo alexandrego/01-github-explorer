@@ -76,4 +76,4 @@
 --> Salva o arquivo e importa ele dentro do index.jsx. Salva e execulta com o seguinte código:</br>
 ````yarn webpack```</br>
 --> Vamos agora dentro do arquivo index.jsx na pasta src, adicionar a seguinte div no corpo do arquivo:</br>
-```<div id="root"></div>```
+```<div id="root"></div>``` Teste
